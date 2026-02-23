@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoiceDictation — Voice to text on your Mac, for pennies</title>
+    <meta name="description" content="A free Mac dictation app powered by OpenAI Whisper. No subscription, no cloud storage, no data collection. Bring your own API key and pay cents, not pounds.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Hero -->
+<section class="hero">
+    <div class="container">
+        <div class="badge">Free &amp; open source for macOS</div>
+        <h1>Voice to text on your Mac.<br>No subscription. Just pennies.</h1>
+        <p class="subtitle">Hold a key, speak, release. Your words appear wherever your cursor is. Powered by OpenAI Whisper with your own API key &mdash; so you get premium quality for a fraction of the cost.</p>
+        <div class="cta-group">
+            <a href="#download" class="btn btn-primary">Download for Mac</a>
+            <a href="https://github.com/jackl123/voice-dictation" class="btn btn-secondary">View on GitHub</a>
+        </div>
+    </div>
+</section>
+
+<!-- How it works -->
+<section class="how-it-works">
+    <div class="container">
+        <h2>How it works</h2>
+        <div class="steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-icon">&#128433;</div>
+                <h3>Click anywhere</h3>
+                <p>Put your cursor where you want text to appear &mdash; any app, any text field.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-icon">&#127908;</div>
+                <h3>Hold your hotkey &amp; speak</h3>
+                <p>Hold the Right Command key (or any key you choose) and just talk naturally.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-icon">&#9996;&#65039;</div>
+                <h3>Release &mdash; text appears</h3>
+                <p>Let go and your words are transcribed, formatted, and typed out instantly.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Why it's different -->
+<section class="comparison">
+    <div class="container">
+        <h2>Why pay &pound;15/month for dictation?</h2>
+        <p class="section-subtitle">Other apps charge a subscription and route your audio through their servers. This app doesn't.</p>
+        <div class="comparison-table">
+            <div class="comparison-header">
+                <div class="comparison-feature"></div>
+                <div class="comparison-them">Typical dictation app</div>
+                <div class="comparison-us">VoiceDictation</div>
+            </div>
+            <div class="comparison-row">
+                <div class="comparison-feature">Monthly cost</div>
+                <div class="comparison-them">&pound;10&ndash;15/month</div>
+                <div class="comparison-us highlight">~&pound;0.50/month</div>
+            </div>
+            <div class="comparison-row">
+                <div class="comparison-feature">Annual cost</div>
+                <div class="comparison-them">&pound;120&ndash;180/year</div>
+                <div class="comparison-us highlight">~&pound;6/year</div>
+            </div>
+            <div class="comparison-row">
+                <div class="comparison-feature">Your audio data</div>
+                <div class="comparison-them">Sent to their servers</div>
+                <div class="comparison-us highlight">Direct to OpenAI, or stays on your Mac</div>
+            </div>
+            <div class="comparison-row">
+                <div class="comparison-feature">Account required</div>
+                <div class="comparison-them">Yes</div>
+                <div class="comparison-us highlight">No</div>
+            </div>
+            <div class="comparison-row">
+                <div class="comparison-feature">Transcription quality</div>
+                <div class="comparison-them">Good</div>
+                <div class="comparison-us highlight">Same (OpenAI Whisper)</div>
+            </div>
+            <div class="comparison-row">
+                <div class="comparison-feature">Source code</div>
+                <div class="comparison-them">Closed</div>
+                <div class="comparison-us highlight">Open source</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- The cost thing -->
+<section class="cost-explainer">
+    <div class="container">
+        <h2>Bring your own API key</h2>
+        <p class="section-subtitle">You use your own OpenAI API key. That means no middleman, no markup, and you only pay for what you use.</p>
+        <div class="cost-cards">
+            <div class="cost-card">
+                <div class="cost-amount">&pound;0.02</div>
+                <div class="cost-label">per 10 minutes of dictation</div>
+            </div>
+            <div class="cost-card">
+                <div class="cost-amount">~&pound;0.50</div>
+                <div class="cost-label">per month with typical daily use</div>
+            </div>
+            <div class="cost-card">
+                <div class="cost-amount">~&pound;6</div>
+                <div class="cost-label">per year of heavy use</div>
+            </div>
+        </div>
+        <div class="cost-note">
+            <p>Getting an API key takes 2 minutes at <a href="https://platform.openai.com/api-keys" target="_blank" rel="noopener">platform.openai.com</a>. The app walks you through it during setup.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Features -->
+<section class="features">
+    <div class="container">
+        <h2>Everything you need, nothing you don't</h2>
+        <div class="feature-grid">
+            <div class="feature">
+                <div class="feature-icon">&#128274;</div>
+                <h3>Private by design</h3>
+                <p>Audio goes directly from your Mac to OpenAI. No intermediary servers. No data stored. No accounts.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">&#9000;&#65039;</div>
+                <h3>Configurable hotkey</h3>
+                <p>Use Right Command, Function, or set any key combination you like. Hold to record, release to transcribe.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">&#128221;</div>
+                <h3>Smart formatting</h3>
+                <p>AI-powered punctuation, capitalisation, and structure. Choose formal, casual, or very casual tone.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">&#127758;</div>
+                <h3>Works everywhere</h3>
+                <p>Dictate into any app &mdash; email, Slack, Notes, your browser, code editors. If you can type there, you can dictate there.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">&#128200;</div>
+                <h3>Cost tracking</h3>
+                <p>See exactly how much each dictation costs. Spoiler: it's fractions of a penny.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">&#128587;</div>
+                <h3>Per-app tones</h3>
+                <p>Set different writing tones for different apps. Formal for email, casual for Slack &mdash; automatically.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Download -->
+<section class="download" id="download">
+    <div class="container">
+        <h2>Download VoiceDictation</h2>
+        <p class="section-subtitle">Free, open source, and always will be. Donations appreciated but never required.</p>
+        <div class="download-box">
+            <div class="download-info">
+                <span class="download-version">v1.3</span>
+                <span class="download-reqs">Requires macOS 13+</span>
+            </div>
+            <a href="https://github.com/jackl123/voice-dictation/releases/latest" class="btn btn-primary btn-large">Download .dmg</a>
+        </div>
+        <div class="donate-note">
+            <p>If this app saves you money, consider <a href="#">buying me a coffee</a>.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <p>Built by <a href="https://github.com/jackl123" target="_blank" rel="noopener">Jack</a>. Source on <a href="https://github.com/jackl123/voice-dictation" target="_blank" rel="noopener">GitHub</a>.</p>
+    </div>
+</footer>
+
+</body>
+</html>
