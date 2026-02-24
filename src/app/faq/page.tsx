@@ -3,7 +3,7 @@ import { siteConfig } from "@/lib/config";
 
 export const metadata: Metadata = {
   title: "FAQ",
-  description: `Frequently asked questions about ${siteConfig.name} — API keys, privacy, cost, and more.`,
+  description: `Frequently asked questions about ${siteConfig.name} \u2014 API keys, privacy, cost, and more.`,
 };
 
 const faqs: { q: string; a: string }[] = [
@@ -21,7 +21,7 @@ const faqs: { q: string; a: string }[] = [
   },
   {
     q: "How much does it cost to use?",
-    a: "OpenAI\u2019s Whisper API costs $0.006 per minute of audio. In practice, most users spend a few pennies per day. If you dictate for 5 minutes a day, that\u2019s roughly 50p per month. The app shows you the cost of each dictation so there are no surprises.",
+    a: "OpenAI\u2019s Whisper API costs about $0.006 per minute of audio. In practice, most people spend a few pennies per day. If you dictate for five minutes a day, that\u2019s roughly 50p per month. The app shows you the cost of each dictation so there are no surprises.",
   },
   {
     q: "Why is this free?",
@@ -37,7 +37,7 @@ const faqs: { q: string; a: string }[] = [
   },
   {
     q: "Does it work offline?",
-    a: `${siteConfig.name} includes a local transcription model (Whisper tiny) that works without an internet connection. The quality is noticeably lower than the API, but it works in a pinch. The API mode requires an internet connection.`,
+    a: `${siteConfig.name} includes a local transcription model that works without an internet connection. The quality is noticeably lower than the API, but it works in a pinch. The API mode requires an internet connection.`,
   },
   {
     q: "Which apps does it work with?",
@@ -59,20 +59,20 @@ const faqs: { q: string; a: string }[] = [
 
 export default function FAQ() {
   return (
-    <div className="px-6 py-20">
-      <div className="mx-auto max-w-3xl">
-        <h1 className="text-3xl font-bold tracking-tight md:text-4xl">
+    <div className="px-6 py-24">
+      <div className="mx-auto max-w-2xl">
+        <h1 className="font-serif text-3xl tracking-tight md:text-4xl">
           Frequently asked questions
         </h1>
-        <p className="mt-4 text-lg text-neutral-500 dark:text-neutral-400">
-          Straightforward answers. No marketing spin.
+        <p className="mt-5 text-lg text-warm-500 dark:text-warm-400">
+          Straightforward answers.
         </p>
 
-        <div className="mt-14 divide-y divide-neutral-100 dark:divide-neutral-800">
+        <div className="mt-16 space-y-14">
           {faqs.map((faq) => (
-            <div key={faq.q} className="py-8">
-              <h2 className="text-lg font-semibold">{faq.q}</h2>
-              <p className="mt-3 leading-relaxed text-neutral-600 dark:text-neutral-400">
+            <div key={faq.q}>
+              <h2 className="font-serif text-lg">{faq.q}</h2>
+              <p className="mt-3 leading-relaxed text-warm-500 dark:text-warm-400">
                 {faq.a}
               </p>
             </div>

@@ -2,11 +2,11 @@
 // Change the name here and it updates everywhere.
 
 export const siteConfig = {
-  name: "KeyScribe",
-  tagline: "Voice Dictation. Powered by Your Own AI Key.",
+  name: "SpeakEasy",
+  tagline: "Speak naturally. Write beautifully.",
   description:
-    "A fast, private macOS dictation app that uses your OpenAI API key. No subscriptions. No tracking. No lock-in.",
-  url: "https://keyscribe.app",
+    "A calm, private macOS dictation app. Bring your own OpenAI key, pay pennies, keep everything on your terms.",
+  url: "https://speakeasy.app",
   github: "https://github.com/jackl123/voice-dictation",
   download: "https://github.com/jackl123/voice-dictation/releases/latest",
   donate: "#",

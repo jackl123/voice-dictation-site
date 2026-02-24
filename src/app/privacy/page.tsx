@@ -3,46 +3,39 @@ import { siteConfig } from "@/lib/config";
 
 export const metadata: Metadata = {
   title: "Privacy",
-  description: `How ${siteConfig.name} handles your data. No backend, no accounts, no analytics, no data collection.`,
+  description: `How ${siteConfig.name} handles your data. No backend, no accounts, no analytics.`,
 };
 
 export default function Privacy() {
   return (
-    <div className="px-6 py-20">
-      <article className="mx-auto max-w-3xl">
-        <h1 className="text-3xl font-bold tracking-tight md:text-4xl">
+    <div className="px-6 py-24">
+      <article className="mx-auto max-w-2xl">
+        <h1 className="font-serif text-3xl tracking-tight md:text-4xl">
           Privacy
         </h1>
-        <p className="mt-4 text-lg text-neutral-500 dark:text-neutral-400">
-          {siteConfig.name} is designed to minimise data exposure. This page
-          explains exactly what happens with your data and what doesn&rsquo;t.
+        <p className="mt-5 text-lg leading-relaxed text-warm-500 dark:text-warm-400">
+          {siteConfig.name} is designed to minimise data exposure. Here&rsquo;s
+          what happens with your data and what doesn&rsquo;t.
         </p>
 
         <Section title="Architecture">
           <p>
             {siteConfig.name} is a native macOS application. It has no backend
-            servers, no database, no user accounts, and no cloud
-            infrastructure. The app runs entirely on your Mac.
+            servers, no database, no user accounts, and no cloud infrastructure.
+            The app runs entirely on your Mac.
           </p>
           <p>
             When you dictate, audio is sent directly from your device to
-            OpenAI&rsquo;s API over HTTPS. The response (transcribed text)
-            comes back to your device. No third-party server sits in between.
+            OpenAI&rsquo;s API over HTTPS. The response comes back to your
+            device. No third-party server sits in between.
           </p>
         </Section>
 
         <Section title="What we collect">
-          <p>Nothing.</p>
-          <ul className="mt-3 list-inside space-y-1">
-            <li>&bull; No analytics or telemetry</li>
-            <li>&bull; No crash reports</li>
-            <li>&bull; No usage tracking</li>
-            <li>&bull; No cookies</li>
-            <li>&bull; No identifiers</li>
-          </ul>
-          <p className="mt-3">
-            We have no mechanism to collect data because there is no server to
-            send it to.
+          <p>
+            Nothing. No analytics, no telemetry, no crash reports, no usage
+            tracking, no cookies, no identifiers. We have no mechanism to
+            collect data because there is no server to send it to.
           </p>
         </Section>
 
@@ -65,16 +58,16 @@ export default function Privacy() {
           </p>
         </Section>
 
-        <Section title="OpenAI&rsquo;s data handling">
+        <Section title={"OpenAI\u2019s data handling"}>
           <p>
             Audio is processed by OpenAI&rsquo;s Whisper API. According to{" "}
             <a
               href="https://openai.com/policies/api-data-usage-policies"
               target="_blank"
               rel="noopener noreferrer"
-              className="underline decoration-neutral-300 underline-offset-4 hover:decoration-neutral-500 dark:decoration-neutral-600"
+              className="underline decoration-warm-300 underline-offset-4 transition-opacity hover:opacity-70 dark:decoration-warm-600"
             >
-              OpenAI&rsquo;s API data usage policy
+              their API data usage policy
             </a>
             , data submitted through the API is not used to train their models
             by default. OpenAI may retain API inputs for up to 30 days for
@@ -98,12 +91,12 @@ export default function Privacy() {
         <Section title="Source code">
           <p>
             {siteConfig.name} is open source. Every claim on this page can be
-            verified by reading the code at{" "}
+            verified by reading the code on{" "}
             <a
               href={siteConfig.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="underline decoration-neutral-300 underline-offset-4 hover:decoration-neutral-500 dark:decoration-neutral-600"
+              className="underline decoration-warm-300 underline-offset-4 transition-opacity hover:opacity-70 dark:decoration-warm-600"
             >
               GitHub
             </a>
@@ -111,22 +104,21 @@ export default function Privacy() {
           </p>
         </Section>
 
-        <Section title="What we do NOT claim">
-          <ul className="list-inside space-y-1">
-            <li>
-              &bull; We do not claim your data never leaves your device. Audio
-              is sent to OpenAI for transcription.
-            </li>
-            <li>
-              &bull; We do not claim &ldquo;100% privacy.&rdquo; You are using
-              a third-party API.
-            </li>
-            <li>
-              &bull; We do not claim control over OpenAI&rsquo;s data handling
+        <Section title="What we do not claim">
+          <div className="space-y-3">
+            <p>
+              We do not claim your data never leaves your device. Audio is sent
+              to OpenAI for transcription.
+            </p>
+            <p>
+              We do not claim total privacy. You are using a third-party API.
+            </p>
+            <p>
+              We do not claim control over OpenAI&rsquo;s data handling
               practices.
-            </li>
-          </ul>
-          <p className="mt-3">
+            </p>
+          </div>
+          <p className="mt-5">
             What we do guarantee: there is no intermediary between you and
             OpenAI, and we never see, store, or process your data.
           </p>
@@ -144,9 +136,9 @@ function Section({
   children: React.ReactNode;
 }) {
   return (
-    <section className="mt-12">
-      <h2 className="text-xl font-semibold">{title}</h2>
-      <div className="mt-3 space-y-3 leading-relaxed text-neutral-600 dark:text-neutral-400">
+    <section className="mt-14">
+      <h2 className="font-serif text-lg">{title}</h2>
+      <div className="mt-4 space-y-4 leading-relaxed text-warm-500 dark:text-warm-400">
         {children}
       </div>
     </section>
