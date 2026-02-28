@@ -1,4 +1,5 @@
 import { siteConfig } from "@/lib/config";
+import AnimatedAppPreview from "@/components/AnimatedAppPreview";
 
 /* ─── Hero ───────────────────────────────────────────────────── */
 
@@ -58,76 +59,6 @@ function Hero() {
             Get started
           </a>
         </div>
-      </div>
-    </section>
-  );
-}
-
-/* ─── App Preview ────────────────────────────────────────────── */
-
-function AppPreview() {
-  return (
-    <section className="animate-fade-in delay-450 px-4 py-8 sm:py-12">
-      <div className="mx-auto max-w-2xl">
-        {/* macOS window chrome */}
-        <div className="overflow-hidden rounded-t-xl bg-palette-50 shadow-[0_4px_24px_rgba(212,201,184,0.4)] ring-[0.5px] ring-palette-200 dark:bg-palette-900 dark:shadow-[0_4px_24px_rgba(31,27,22,0.6)] dark:ring-palette-800">
-          {/* Title bar */}
-          <div className="flex items-center gap-2 border-b border-palette-200 px-4 py-3 dark:border-palette-800">
-            <div className="flex gap-1.5">
-              <div className="h-3 w-3 rounded-full bg-palette-200 dark:bg-palette-700" />
-              <div className="h-3 w-3 rounded-full bg-palette-200 dark:bg-palette-700" />
-              <div className="h-3 w-3 rounded-full bg-palette-200 dark:bg-palette-700" />
-            </div>
-            <span className="ml-2 text-xs font-medium text-palette-400 dark:text-palette-500">
-              SpeakEasy
-            </span>
-          </div>
-
-          {/* Content area */}
-          <div className="h-[320px] p-6">
-            {/* Status indicator */}
-            <div className="mb-6 flex items-center gap-2">
-              <div className="flex items-center gap-2 rounded-full bg-palette-100 px-3 py-1 dark:bg-palette-800">
-                <div className="h-2 w-2 rounded-full bg-tint" />
-                <span className="text-[13px] font-medium text-palette-500 dark:text-palette-400">
-                  Listening...
-                </span>
-              </div>
-              <span className="text-xs text-palette-400 dark:text-palette-500">
-                0:03
-              </span>
-            </div>
-
-            {/* Transcribed text */}
-            <div className="space-y-4 text-[15px] leading-relaxed text-palette-600 dark:text-palette-300">
-              <p>
-                The quarterly results exceeded expectations across all regions.
-                Revenue grew 12% year over year, driven primarily by expansion
-                in the enterprise segment.
-              </p>
-              <p className="text-palette-400 dark:text-palette-500">
-                We should highlight the customer retention improvements in the
-                next board presentation...
-              </p>
-            </div>
-
-            {/* Waveform visualization */}
-            <div className="mt-8 flex items-end justify-center gap-[3px]">
-              {[3, 8, 14, 20, 16, 24, 18, 12, 22, 14, 8, 18, 26, 20, 10, 6, 14, 22, 16, 8, 12, 18, 10, 6, 4].map(
-                (h, i) => (
-                  <div
-                    key={i}
-                    className="w-[3px] rounded-full bg-tint/40"
-                    style={{ height: `${h}px` }}
-                  />
-                )
-              )}
-            </div>
-          </div>
-        </div>
-
-        {/* Gradient divider below preview */}
-        <div className="divider-gradient" />
       </div>
     </section>
   );
@@ -399,7 +330,7 @@ export default function Home() {
     <div className="flex flex-col gap-16 sm:gap-24">
       <div>
         <Hero />
-        <AppPreview />
+        <AnimatedAppPreview />
       </div>
       <Features />
       <HowItWorks />
