@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* Oatmeal palette — warm, earthy tones inspired by Shiori */
+  --color-palette-50: #faf8f5;
+  --color-palette-100: #f3ede4;
+  --color-palette-200: #e5ddd1;
+  --color-palette-300: #d4c9b8;
+  --color-palette-400: #a89578;
+  --color-palette-500: #847258;
+  --color-palette-600: #6a5a44;
+  --color-palette-700: #574a38;
+  --color-palette-800: #3f362a;
+  --color-palette-900: #2d2720;
+  --color-palette-950: #1f1b16;
+
+  /* Accent tint — warm amber */
+  --color-tint: #d27d32;
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, sans-serif;
+}
+
+/* Soft fade-in */
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.8s ease both;
+}
+
+.delay-150 { animation-delay: 150ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-450 { animation-delay: 450ms; }
+
+/* Smooth dark mode transition */
+html {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Warm text selection */
+::selection {
+  background: rgba(210, 125, 50, 0.15);
+}
+
+.dark ::selection {
+  background: rgba(255, 140, 38, 0.25);
+}
+
+/* Gradient divider */
+.divider-gradient {
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--color-palette-200), transparent);
+}
+
+.dark .divider-gradient {
+  background: linear-gradient(to right, transparent, var(--color-palette-800), transparent);
+}
