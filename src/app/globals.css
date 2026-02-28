@@ -3,59 +3,39 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  /* Sage green accent palette */
-  --color-accent-50: #f4f7f5;
-  --color-accent-100: #e4ece6;
-  --color-accent-200: #c9d9ce;
-  --color-accent-300: #a3bfab;
-  --color-accent-400: #7da388;
-  --color-accent-500: #5c7c64;
-  --color-accent-600: #4a6651;
-  --color-accent-700: #3d5343;
-  --color-accent-800: #334437;
-  --color-accent-900: #2b392f;
+  /* Oatmeal palette — warm, earthy tones inspired by Shiori */
+  --color-palette-50: #faf8f5;
+  --color-palette-100: #f3ede4;
+  --color-palette-200: #e5ddd1;
+  --color-palette-300: #d4c9b8;
+  --color-palette-400: #a89578;
+  --color-palette-500: #847258;
+  --color-palette-600: #6a5a44;
+  --color-palette-700: #574a38;
+  --color-palette-800: #3f362a;
+  --color-palette-900: #2d2720;
+  --color-palette-950: #1f1b16;
 
-  /* Warm neutrals */
-  --color-warm-50: #faf9f7;
-  --color-warm-100: #f5f3ef;
-  --color-warm-200: #e8e4de;
-  --color-warm-300: #d4cec4;
-  --color-warm-400: #b5ad9f;
-  --color-warm-500: #968c7d;
-  --color-warm-600: #7a7064;
-  --color-warm-700: #5c5549;
-  --color-warm-800: #3d3833;
-  --color-warm-900: #1a1918;
+  /* Accent tint — warm amber */
+  --color-tint: #d27d32;
 
   --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system,
     BlinkMacSystemFont, sans-serif;
-  --font-serif: "Source Serif 4", "Georgia", ui-serif, serif;
 }
 
-/* Soft fade-in — opacity only, no movement */
+/* Soft fade-in */
 @keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 .animate-fade-in {
   animation: fade-in 0.8s ease both;
 }
 
-/* Staggered delays */
-.delay-150 {
-  animation-delay: 150ms;
-}
-.delay-300 {
-  animation-delay: 300ms;
-}
-.delay-450 {
-  animation-delay: 450ms;
-}
+.delay-150 { animation-delay: 150ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-450 { animation-delay: 450ms; }
 
 /* Smooth dark mode transition */
 html {
@@ -64,9 +44,19 @@ html {
 
 /* Warm text selection */
 ::selection {
-  background: rgba(92, 124, 100, 0.15);
+  background: rgba(210, 125, 50, 0.15);
 }
 
 .dark ::selection {
-  background: rgba(92, 124, 100, 0.25);
+  background: rgba(255, 140, 38, 0.25);
+}
+
+/* Gradient divider */
+.divider-gradient {
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--color-palette-200), transparent);
+}
+
+.dark .divider-gradient {
+  background: linear-gradient(to right, transparent, var(--color-palette-800), transparent);
 }
